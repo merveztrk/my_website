@@ -142,10 +142,6 @@ export default function ContactSection() {
               onSubmit={handleSubmit}
               className="glass-card rounded-3xl p-6 md:p-7 border border-brand-200/50 shadow-lg flex-1 flex flex-col justify-between space-y-4"
             >
-              <h3 className="text-base font-bold text-brand-800">
-                ✉️ Bize Ulaşın
-              </h3>
-
               <div className="space-y-3 flex-1 flex flex-col justify-between">
                 <div>
                   <input
@@ -190,12 +186,9 @@ export default function ContactSection() {
                 className="w-full py-3 px-6 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-brand-800 to-brand-500 hover:from-brand-700 hover:to-brand-400 shadow-md hover:shadow-lg disabled:opacity-70 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 {status.loading ? (
-                  <span>Gönderiliyor... ⏳</span>
+                  <span>Gönderiliyor...</span>
                 ) : (
-                  <>
-                    <span>Mesaj Gönder ✨</span>
-                    <Send className="w-4 h-4" />
-                  </>
+                  <span>Mesaj Gönder</span>
                 )}
               </button>
 

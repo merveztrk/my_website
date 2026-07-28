@@ -41,27 +41,35 @@ export default function ProjectsSection() {
         </h2>
 
         {/* Side-by-Side 3-Column Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
           {projects.map((project) => {
             const isExpanded = !!expandedCards[project.id];
             return (
               <div
                 key={project.id}
-                className="glass-card rounded-3xl overflow-hidden shadow-lg border border-brand-200/50 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+                className="glass-card rounded-3xl overflow-hidden shadow-lg border border-brand-200/50 flex flex-col justify-between hover:shadow-xl hover:-translate-y-1 transition-all duration-300 h-full"
               >
-                <div>
-                  {/* Uncropped Full Image Display Frame */}
-                  <div className="relative h-48 w-full bg-white/80 overflow-hidden flex items-center justify-center p-2 border-b border-brand-100/60">
+                <div className="flex flex-col flex-1">
+                  {/* Smart Frame: Full Uncropped Image + Ambient Blurred Backdrop */}
+                  <div className="relative h-48 sm:h-52 w-full overflow-hidden flex items-center justify-center border-b border-brand-100/60 bg-brand-50/80 p-2">
+                    {/* Blurred background image to eliminate empty/white gaps */}
+                    <img
+                      src={project.image}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 w-full h-full object-cover blur-xl scale-125 opacity-40 select-none pointer-events-none"
+                    />
+                    {/* Full uncropped image in front */}
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-full object-contain hover:scale-105 transition-transform duration-500 rounded-xl"
+                      className="relative z-10 max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-500 rounded-lg drop-shadow-md"
                     />
                   </div>
 
                   {/* Card Content */}
-                  <div className="p-5">
-                    <h3 className="text-base font-bold text-brand-800 leading-snug mb-3">
+                  <div className="p-5 flex-1 flex flex-col justify-between">
+                    <h3 className="text-base font-bold text-brand-800 leading-snug mb-3 min-h-[3.5rem] flex items-center">
                       {project.title}
                     </h3>
 
@@ -80,7 +88,7 @@ export default function ProjectsSection() {
                     onClick={() => toggleDetails(project.id)}
                     className="w-full py-2 px-4 rounded-full text-xs font-bold text-brand-800 bg-white hover:bg-brand-50 border border-brand-200 shadow-sm transition-all duration-200"
                   >
-                    {isExpanded ? 'Kapat ✖' : 'Detaylar ✨'}
+                    {isExpanded ? 'Kapat' : 'Detaylar'}
                   </button>
                 </div>
               </div>
