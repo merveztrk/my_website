@@ -26,10 +26,11 @@ body::before {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.38) 0%, rgba(255, 245, 248, 0.32) 100%), url('assets1/theme.jpg') no-repeat center center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(253, 246, 248, 0.58) 100%), url('assets1/theme.jpg') no-repeat center center;
   background-size: cover;
   pointer-events: none;
   z-index: -1;
+  opacity: 0.68;
 }
 
 /* Smooth Fade-in Transition for Site Content */
@@ -394,22 +395,22 @@ section p {
   margin-bottom: 0;
 }
 
-/* Skills Section - Equal Width Grid Layout */
+/* Skills Section - Equal Width Flex/Grid Layout */
 .skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
   margin-top: 14px;
 }
 
 .skill-badge {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, #FFF0F5 0%, #FCD5E2 100%);
   color: #6D2439;
-  padding: 12px 16px;
+  padding: 10px 18px;
   border-radius: 16px;
   font-size: 13.5px;
   font-weight: 700;
@@ -417,7 +418,6 @@ section p {
   box-shadow: 0 4px 12px rgba(232, 165, 184, 0.18);
   transition: all 0.25s ease;
   user-select: none;
-  width: 100%;
 }
 
 .skill-badge:hover {
@@ -928,13 +928,25 @@ footer p {
   }
 
   .skills {
-    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    gap: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
 
   .skill-badge {
+    width: 100%;
     padding: 10px 12px;
     font-size: 12.5px;
+    min-height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 14px;
+  }
+
+  .skills .skill-badge:last-child:nth-child(odd) {
+    grid-column: span 2;
   }
 
   .contact-form {

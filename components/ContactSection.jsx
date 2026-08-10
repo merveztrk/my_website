@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, Linkedin, Github, Send, CheckCircle2 } from 'lucide-react';
+import { Mail, Linkedin, Github, Send, CheckCircle2 } from 'lucide-react';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
@@ -69,12 +69,6 @@ export default function ContactSection() {
       value: 'merveozturk0105@gmail.com',
       href: 'mailto:merveozturk0105@gmail.com',
       icon: Mail,
-    },
-    {
-      title: 'Telefon',
-      value: '+90 551 024 57 85',
-      href: 'tel:+905510245785',
-      icon: Phone,
     },
     {
       title: 'LinkedIn',

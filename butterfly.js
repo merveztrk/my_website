@@ -89,20 +89,15 @@ function createFireworkConfetti() {
 
 window.onload = function() {
   const siteContent = document.getElementById('site-content');
-  const butterflies = document.getElementById('butterflies');
 
-  // 1. Önce ekranın tam ortasından konfeti havai fişeği patlasın
+  // 1. Ekranın ortasından konfeti patlasın
   createFireworkConfetti();
 
-  // 2. Konfeti patlaması yayıldıktan sonra (0.8 saniye) sayfa süzülerek açılsın
-  setTimeout(() => {
-    if (siteContent) {
-      siteContent.style.display = 'block';
-      setTimeout(() => {
-        siteContent.classList.add('loaded');
-      }, 50);
-    }
-  }, 800);
+  // 2. Sayfa anında görünür olsun
+  if (siteContent) {
+    siteContent.style.display = 'block';
+    siteContent.classList.add('loaded');
+  }
 };
 
 // Proje detaylarını açma / kapama fonksiyonu
@@ -220,7 +215,7 @@ async function sendEmail(e) {
 
   if (!form) return;
 
-  const originalBtnContent = btn ? btn.innerHTML : '<span>Mesaj Gönder ✨</span>';
+  const originalBtnContent = btn ? btn.innerHTML : '<span>Mesaj Gönder</span>';
   if (btn) {
     btn.disabled = true;
     btn.innerHTML = '<span>Gönderiliyor... ⏳</span>';

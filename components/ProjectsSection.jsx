@@ -28,7 +28,7 @@ export default function ProjectsSection() {
     {
       id: 'yurt',
       title: 'KYK Çamaşırhane Randevu Sistemi',
-      image: '/assets1/yurt.png',
+      image: '/assets1/yurt.jpeg',
       details: 'Yurtta kalan öğrencilerin çamaşırhane kullanımını kolaylaştıran mobil uygulama.',
     },
   ];
@@ -57,12 +57,16 @@ export default function ProjectsSection() {
                       src={project.image}
                       alt=""
                       aria-hidden="true"
+                      loading="lazy"
+                      decoding="async"
                       className="absolute inset-0 w-full h-full object-cover blur-xl scale-125 opacity-40 select-none pointer-events-none"
                     />
                     {/* Full uncropped image in front */}
                     <img
                       src={project.image}
                       alt={project.title}
+                      loading="lazy"
+                      decoding="async"
                       className="relative z-10 max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-500 rounded-lg drop-shadow-md"
                     />
                   </div>
