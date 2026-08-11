@@ -22,7 +22,12 @@ export const metadata = {
   keywords: ['Merve Öztürk', 'Bilgisayar Mühendisi', 'Flutter', 'Yapay Zeka', 'Machine Learning', 'Derin Öğrenme', 'Portfolyo'],
   authors: [{ name: 'Merve Öztürk' }],
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/assets1/favicon.svg', type: 'image/svg+xml' },
+      { url: '/assets1/logo.png', type: 'image/png' },
+    ],
+    shortcut: '/assets1/favicon.svg',
+    apple: '/assets1/favicon.svg',
   },
 };
 

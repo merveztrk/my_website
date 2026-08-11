@@ -56,7 +56,7 @@ export default function Header() {
           className="group flex items-center gap-3 focus:outline-none"
         >
           <img
-            src="/assets1/logo.png"
+            src="/assets1/logo.jpeg"
             alt="Site Logosu"
             className="h-10 w-auto rounded-lg border border-[#E8A5B8] shadow-sm object-contain group-hover:scale-105 transition-transform duration-300"
           />
