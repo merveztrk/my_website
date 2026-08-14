@@ -45,12 +45,15 @@ export default function Hero() {
       >
         
         {/* Enlarged Quote Banner */}
-        <div className="inline-flex items-center gap-4 px-8 py-3.5 rounded-full bg-white/95 backdrop-blur-md border border-brand-200 shadow-lg">
-          <span className="text-[#B35272] font-bold text-lg md:text-xl">✦</span>
-          <blockquote className="font-serif italic text-xl md:text-2xl text-[#4A202C] font-bold tracking-wide">
-            “ İnanmak, başarmanın yarısıdır. ”
-          </blockquote>
-          <span className="text-[#B35272] font-bold text-lg md:text-xl">✦</span>
+        <div className="quote-card max-w-3xl mx-auto">
+          <span className="quote-sparkle">✦</span>
+          <div className="quote-stack">
+            <blockquote className="quote-text">
+              “Türk mühendislerinin alnında, Cumhuriyet istikbalini aydınlatan ışık parlar.”
+            </blockquote>
+            <span className="quote-author">M. Kemal Atatürk</span>
+          </div>
+          <span className="quote-sparkle">✦</span>
         </div>
 
         {/* Profile & Info Hero Card with Smooth Hover & Parallax */}
@@ -66,13 +69,13 @@ export default function Hero() {
           </div>
 
           {/* Name */}
-          <h1 className="text-xl md:text-3xl font-bold text-[#4A202C] tracking-tight mb-2 uppercase">
+          <h1 className="text-2xl md:text-[2.2rem] font-light text-[#4A202C] tracking-[0.12em] mb-2 uppercase leading-none">
             MERVE ÖZTÜRK
           </h1>
 
           {/* Solid Pink Title Badge: BİLGİSAYAR MÜHENDİSİ */}
           <div className="mt-1 inline-flex items-center px-6 py-2 rounded-full bg-[#FAD0DD] border border-[#E8A5B8] shadow-sm">
-            <h2 className="text-sm md:text-base font-bold text-[#4A202C] tracking-[0.18em] uppercase">
+            <h2 className="text-xs md:text-sm font-medium text-[#4A202C] tracking-[0.22em] uppercase">
               BİLGİSAYAR MÜHENDİSİ
             </h2>
           </div>

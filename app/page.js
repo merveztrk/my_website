@@ -28,14 +28,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen flex flex-col relative text-[#4A202C]">
-      {/* Hardware-accelerated fixed theme background layer */}
-      <div
-        className="fixed inset-0 z-0 pointer-events-none bg-cover bg-center bg-no-repeat opacity-68"
-        style={{
-          backgroundImage: `linear-gradient(135deg, rgba(255, 255, 255, 0.65) 0%, rgba(253, 246, 248, 0.58) 100%), url('/assets1/theme.jpg')`,
-        }}
-      />
-
       {/* Particle & Butterfly Canvas - Explodes immediately on load */}
       <ButterflyCanvas />
 
